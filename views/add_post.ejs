@@ -1,0 +1,23 @@
+<form action="/post/addpostdetails" method="post" enctype="multipart/form-data">
+    <table border="1">
+        <tr>
+            <td>Enter Title</td>
+            <td><input type="text" name="title"></td>
+        </tr>
+        <tr>
+            <td>Enter Content</td>
+            <td><textarea name="content"></textarea></td>
+        </tr>
+        <tr>
+            <td>Select Image</td>
+            <td><input type="file" name="adminimg"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Add Post"></td>
+        </tr>
+    </table>
+</form>
+
+<a href="/post/view_post"
+    style="background-color:blue; color: white;font-size: 17px; padding: 10px 15px;text-decoration: none;">View post</a>

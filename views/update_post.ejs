@@ -1,0 +1,26 @@
+<form action="/post/EditpostDetalis" method="post" enctype="multipart/form-data">
+
+    <input type="hidden" name="Editpost" value="<%=oldpost.id%>">
+    <table border="1">
+        <tr>
+            <td>Enter your Title</td>
+            <td><input type="text" name="title" value="<%=oldpost.title%>"></td>
+        </tr>
+        <tr>
+            <td>Enter Your Content</td>
+            <td><input type="text" name="content" value="<%=oldpost.content%>"></td>
+        </tr>
+        <tr>
+            <td>Uploade Image</td>
+            <td>
+                <input type="file" name="adminimg"> 
+                <img src="<%= oldpost.adminimg%>" height="200">
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Edit Record"></td>
+        </tr>
+    </table>
+</form>

@@ -1,0 +1,55 @@
+<form action="addstudentDetalis" method="post" enctype="multipart/form-data">
+    <table border="1">
+        <tr>
+            <td>Enter your name</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Enter your age</td>
+            <td><input type="text" name="age"></td>
+        </tr>
+        <tr>
+            <td>Select Gender</td>
+            <td>
+                <input type="radio" name="gender" value="male">male
+                <input type="radio" name="gender" value="female">Female
+            </td>
+        </tr>
+        <tr>
+            <td>Select Hobby</td>
+            <td>
+                <input type="checkbox" name="hobby" value="reading">Reading
+                <input type="checkbox" name="hobby" value="music">Music
+                <input type="checkbox" name="hobby" value="travel">Travel
+            </td>
+        </tr>
+        <%var city=["surat","vadodara","rajkot","navasari","bhruch"]%>
+            <tr>
+                <td>Select City</td>
+                <td>
+                    <select name="city">
+
+                        <option value="">--Select City--</option>
+                        <% city.map((v)=>{%>
+                            <option value="<%= v %>">
+                                <%= v %>
+                            </option>
+                            <%})%>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter your Message</td>
+                <td><textarea name="mes"></textarea></td>
+            </tr>
+            <tr>
+                <td>Uploade Image</td>
+                <td><input type="file" name="adminimg"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="submit" value="Add Record"></td>
+            </tr>
+    </table>
+</form>
+<a href="/view" style="background-color:blue; color: white;font-size: 17px; padding: 10px 15px;text-decoration: none;">View Page</a>

@@ -1,0 +1,47 @@
+<a href="/"
+    style="background-color:chartreuse; color: black;font-size: 17px; padding: 10px 15px;text-decoration: none;">main
+    Page</a>
+<h1>Students Details</h1>
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Gender</td>
+        <td>Hobby</td>
+        <td>city</td>
+        <td>Image</td>
+        <td>mes</td>
+        <td>Action</td>
+    </tr>
+
+    <%for(let ob of Stdata) {%>
+        <tr>
+            <td>
+                <%=ob.name%>
+            </td>
+            <td>
+                <%=ob.age%>
+            </td>
+            <td>
+                <%=ob.gender%>
+            </td>
+            <td>
+                <%=ob.hobby%>
+            </td>
+            <td>
+                <%=ob.city%>
+            </td>
+            <td>
+                <img src="<%=ob.adminImage%>" height="200">
+            </td>
+            <td>
+                <%=ob.mes%>
+            </td>
+            <td>
+                <a href="/deleterecord/<%=ob.id%>">Delete</a> ||
+                <a href="/updaterecord/<%=ob.id%>">Update</a>
+            </td>
+        </tr>
+
+        <%}%>
+</table>

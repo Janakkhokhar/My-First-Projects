@@ -1,0 +1,29 @@
+<a href="/post"
+    style="background-color:chartreuse; color: black;font-size: 17px; padding: 10px 15px;text-decoration: none;">Add
+    post</a>
+
+<h1>Post Details</h1>
+<table border="1">
+    <tr>
+        <td>Title</td>
+        <td>Content</td>
+        <td>Image</td>
+        <td>Action</td>
+    </tr>
+    <% for(let pd of postdata){%>
+        <tr>
+            <td>
+                <%= pd.title%>
+            </td>
+            <td>
+                <%= pd.content%>
+            </td>
+            <td><img src="<%= pd.adminimg%>" height="200"></td>
+            <td>
+                <a href="/post/deleterecordpost/<%=pd.id%>">Delete</a> ||
+                <a href="/post/updaterecordpost/<%=pd.id%>">Update</a>
+            </td>
+        </tr>
+
+        <%}%>
+</table>
